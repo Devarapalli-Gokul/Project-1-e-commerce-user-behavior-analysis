@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sentimentanalysis</groupId>
-    <artifactId>Project-1-e-commerce-user-behavior-analysis</artifactId>
+    <groupId>com.ecommerce</groupId>
+    <artifactId>user-behavior-analysis</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -27,9 +27,13 @@
         </dependency>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-minicluster</artifactId>
+            <artifactId>hadoop-mapreduce-client-jobclient</artifactId>
             <version>3.4.0</version>
-            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-common</artifactId>
+            <version>3.4.0</version>
         </dependency>
     </dependencies>
 
@@ -54,12 +58,11 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.sentimentanalysis.hadoop.SentimentAnalysis</mainClass>
+                            <mainClass>task1.EngagedUsersDriverClass</mainClass> <!-- Updated to point to your main class -->
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
